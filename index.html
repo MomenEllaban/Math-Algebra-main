@@ -1,0 +1,989 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">  
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <meta name="msapplication-TileImage" content="https://i.ibb.co/6YvjYnt/mathematics-symbol.png" alt="mathematics"/>
+
+  <meta property="og:title" content="Exam Math-Algebra 'you have 3 hours to solve it'"/>
+  <meta property="og:site_name" content="Math-Algebra"/>
+  <meta property="og:description" content="Mr: Mohammed El-Sayed"/>
+  <meta property="og:image" itemprop="image" content="https://i.ibb.co/6YvjYnt/mathematics-symbol.png" alt="mathematics"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:height" content="500"/>
+  <meta property="og:image:width" content="500"/>
+
+  
+  <meta property="og:url" content="https://momenellaban.github.io/Math-Algebra/"/>
+
+
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/6YvjYnt/mathematics-symbol.png">
+
+    <title>Math-Algebra</title>
+
+    <!-- global CSS Starts -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/images/mathematics-symbol.png">
+
+    <link rel="stylesheet" href="css/template/fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/footer.css" type="text/css" />
+
+
+    <!-- global CSS End -->
+
+    <!-- global JS Starts -->
+    <script src="js/lib/jquery_v3.3.1.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_DgJnCPXRcX1aFsgPASVYJ");
+        })();
+    </script>
+
+
+    <!-- global JS End -->
+
+</head>
+
+<body>
+
+
+    <div class="quiz container">
+
+        <!-- login Modal -->
+
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="wrapper">
+                <ul class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title" id="staticBackdropLabel">Your Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="User Name">User Name</label>
+                                <input type="text" class="form-control" id="userName" aria-describedby="emailHelp"
+                                    placeholder="Enter User Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+
+
+                                <div class="input-group" id="show_hide_password">
+                                    <input class="form-control" type="password" id="input2"
+                                        placeholder="Enter Password">
+                                    <div class="input-group-addon">
+                                        <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <button type="button" class="btn btn-success" id="login" name="login">Login To Exam</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- end login -->
+
+        <div class="overlay">
+
+            <div class="wrapper">
+                <ul class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="submit2">
+
+                <div class="bg_text">
+                    <div id="student"></div>
+                    <h1>
+                        <i> Math - Algebra </i>
+                    </h1>
+                    <p></p>
+                    <h2>
+                        <i>Mr: Mohammed El-Sayed</i>
+                    </h2>
+                </div>
+
+                <button class="startBtn" id="startBtn" onclick="startTimer()">
+                    start exam
+                </button>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="twelve columns">
+                <header>
+                    <small>Choose the correct answer</small>
+                </header>
+
+            </div>
+        </div>
+
+        <div class="wrap">
+
+            <!-- start print pdf -->
+
+            <div id="element-to-print">
+
+                <div id="emc-score"></div>
+                <div class="row">
+                    <section class="six columns" data-quiz-item>
+                        <div class="question">1 -</span>The algebraic term 6𝑋<sup class="q">3</sup> 𝑦 is of the .....
+                            degree.
+                        </div>
+                        <br>
+                        <div id="b" class="choices" data-choices='["first",  "fourth" , "sixth", "fifth"]'>
+                        </div>
+                    </section>
+
+
+
+
+                    <section class="six columns" data-quiz-item>
+                        <div class="question">2 -</span>The mode of the values: <br class="br"> 7, 5, 𝑋 + 4, 5, 7 is 5,
+                            then 𝑋 = .....
+                        </div><br>
+                        <div class="choices" data-choices='["1", "4", "5", "7"]'>
+                        </div>
+                    </section>
+                </div>
+
+
+                <div>
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">3 -</span>If the rational number<br class="br">
+                                <span class="frection">
+                                    <span class="up">𝑋 - 2</span>
+                                    <span class="down">𝑋 + 3</span>
+                                </span> = 0, then 𝑋 = .....
+                            </div><br>
+                            <div class="choices" data-choices='["1", "2" , "-2",  "-3"]'>
+                            </div>
+                        </section>
+
+                        <section class="six columns" data-quiz-item>
+                            <div class="question"><span class="number ">4 -</span> The multiplicative inverse of the
+                                number 5
+                                <span class="frection">
+                                    <span class="up ">2</span>
+                                    <span class="down">3</span>
+                                </span>
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["<span class=opt>-3&nbsp;<span class=frection><span class=up>2</span><span class=down>3</span></span>",
+                "<span class=opt>3&nbsp;<span class=frection><span class=up>2</span><span class=down>3</span></span>",
+                "<span class=opt ><span class=frection><span class=up >17</span><span class=down>5</span></span></span>", 
+                "<span class=opt ><span class=frection><span class=up >5&nbsp;</span><span class=down >17</span></span></span>"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">5 -</span> (3𝑋 + 5) (𝑋 + 2) = 3𝑋
+                                <SUp class="q">2</SUp> + .....<br class="br"> + 10.
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["-7" , "11𝑋", "5𝑋" , "7𝑋"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">6 -</span> Subtracting -2 𝑋 from 3𝑋 equals .....
+                            </div><br>
+                            <div class="choices" data-choices='["𝑋", "-5𝑋" , "5𝑋", "6𝑋"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+
+                    <div class="row last">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">7 -</span> (𝑋 + 𝑌) (𝑋 - 𝑌) = .....
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["2𝑋", "(𝑋 - 𝑌)", "𝑋<sup>2</sup>", "𝑋<sup>2</sup> - 𝑌<sup>2"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">8 -</span> If
+                                <span class="frection">
+                                    <span class="up ">15</span>
+                                    <span class="down">𝑋</span>
+                                </span> =
+                                <span class="frection">
+                                    <span class="up ">-3</span>
+                                    <span class="down">4</span>
+                                </span> , then 𝑋 = ......
+                            </div><br>
+
+
+                            <div class="choices" data-choices='[ "-20",  "-5", "5",  "20"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row last">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question" class="number">9 -</span>
+                                The algebraic expression:<br class="br"> X<sup class="q">3</sup> -3X<sup
+                                    class="q">2</sup> + 4 ix of the ..... degree.</div><br>
+
+                            <div class="choices"
+                                data-choices='["1<sup>st</sup>", "2<sup>nd</sup>", "3<sup>rd</sup>", "4<sup>th</sup>"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">10 -</span>
+                                <span class="frection">
+                                    <span class="up ">3𝑌</span>
+                                    <span class="down">5</span>
+                                </span> - <span class="frection">
+                                    <span class="up ">𝑌</span>
+                                    <span class="down">5</span>
+                                </span> = ..... .
+                            </div><br>
+
+
+                            <div class="choices"
+                                data-choices='[ "<span class=frection><span class=up>2</span><span class=down>5</span></span>",  "<span class=frection><span class=up>𝑦</span><span class=down>5</span></span>", "<span class=frection><span class=up>2𝑦</span><span class=down>5</span></span>",  "2𝑦"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">11 -</span> The number
+                                <span class="frection">
+                                    <span class="up ">𝑋 - 3</span>
+                                    <span class="down">𝑋 + 5</span>
+                                </span><br class="br"> is 𝑎 rational number if 𝑋 ≠ .....
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["3" , "-5", "5" , "-3"]'>
+                            </div>
+                        </section>
+
+
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">12 -</span> (𝑋<sup class="q">2</sup> + 𝑋) ÷ 𝑋 = .....
+                            </div><br>
+                            <div class="choices" data-choices='["zero", "𝑋" , "2𝑋", "𝑋 + 1"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">13 -</span>
+                                <span class="frection border">
+                                    <span class="up ">-5</span>
+                                    <span class="down">3</span>
+                                </span> ..... zero.
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["<" , "=", ">" , "≤"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">14 -</span> The quotient of dividing 2.25 ÷ 1.5
+
+                            </div><br>
+                            <div class="choices" data-choices='["1.5", "15" , "0.15", "500"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">15 -</span> The median of the value:<br class="br"> 7, 3, 4, 5, 2
+                                is ......
+
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["7" , "4", "5" , "3"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">16 -</span> If the arithmetic mean for the set of values: 3, 5, 𝑋
+                                + 2 is 4, then the arithmetic mean for the set of values: 5 - 𝑋, 5 + 2𝑋 is .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["6", "4" , "3", "2"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">17 -</span> The algebraic term 8𝑋<sup class="q">3</sup> 𝑌<sup
+                                    class="q">2</sup> is of the ...... degree.
+
+                            </div><br>
+                            <div class="choices" data-choices='["third", "fourth" , "fifth", "sixth"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">18 -</span> If
+                                <span class="number"></span>
+                                <span class="frection ">
+                                    <span class="up ">5</span>
+                                    <span class="down">𝑋 + 2</span>
+                                </span> is 𝑎 rational number, then 𝑋 ≠ ..... .
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["-2" , "zero", "2" , "5"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">19 -</span> 2𝑏
+                                <sup class="q">2</sup> ÷ zero = .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["undefined", "zero" , "𝑎𝑏", "𝑏<sup>2</sup> "]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">20 -</span> (15 𝑋<sup class="q">4</sup> + 5𝑋<sup
+                                    class="q">3</sup>) ÷ 5𝑋<sup class="q">3</sup> = ..... .
+
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["3𝑥<sup>2</sup> + 𝑥","5𝑥<sup>2</sup> + 1","3𝑥 + 1","4𝑥<sup>4</sup>"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">21 -</span> The algebraic term 8𝑋<sup class="q">3</sup> 𝑌<sup
+                                    class="q">2</sup> is of the ...... degree.
+
+                            </div><br>
+                            <div class="choices" data-choices='["third", "fourth" , "fifth", "si𝑋h"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">22 -</span> The multiplicative inverse of th number (
+                                <span class="frection">
+                                    <span class="up ">1</span>
+                                    <span class="down">2</span>
+                                </span> )<sup class="q">zero</sup> is .....
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["2" , "-1", "1" , "-2"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">23 -</span> The algebraic term 8𝑋<sup class="q">3</sup> 𝑌<sup
+                                    class="q">2</sup> is of the ...... degree.
+
+                            </div><br>
+                            <div class="choices" data-choices='["third", "fourth" , "fifth", "sixth"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">24 -</span> The number <span class="frection"><span
+                                        class="up">5</span><span class="down">3</span></span>
+                                > .....
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["<span class=frection><span class=up>10</span><span class=down>3</span></span>" , "<span class=frection><span class=up>25</span><span class=down>9</span></span>", "<span class=frection><span class=up>10</span><span class=down>6</span></span>" , "<span class=frection><span class=up>3</span><span class=down>5</span></span>"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">25 -</span> If 3𝑎 = 27 and 𝑎𝑏 = 1,<br class="br"> then 𝑏 =
+                                .....
+
+                            </div><br>
+                            <div class="choices"
+                                data-choices='["<span class=frection><span class=up>1</span><span class=down>9</span></span>", "<span class=frection><span class=up>1</span><span class=down>5</span></span>" , "5", "𝑋"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">26 -</span> The H.C.F of: 10𝑋<sup class="q">2</sup> + 5𝑋 is ...
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["2x" , "5x", "5" , "x"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">27 -</span> The coefficient of the term -5𝑋<sup class="q">2</sup>
+                                𝑌 is .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["5", "-5" , "3", "-3"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">28 -</span> If 6, 5, 12 and 𝑋 are proportional numbers, then<br
+                                    class="br"> 𝑋 = .....
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["8" , "10", "5" , "7"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">29 -</span> The length of a rectangle is 2𝑋cm. and it's width is
+                                𝑌cm. , then it's perimeter = .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["2𝑋𝑌", "3𝑋𝑌" , "2𝑋 + 𝑌", "4𝑋 + 2𝑌"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">30 -</span> If the arithmetic mean of six values is 12, then the
+                                sum of these values equals .....
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["2" , "6", "18" , "72"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">31 -</span> The degree of the algebraic expression: 3𝑋<sup
+                                    class="q">2</sup> + 5𝑋𝑌<sup class="q">2</sup> + 6𝑌
+                                <sup class="q">2</sup> <br class="br">is .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["zero", "second" , "third", "fourth"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">32 -</span> If (𝑋 - 6) (𝑋 + 6) = 𝑋<sup class="q">2</sup> + 𝑘,
+                                then 𝑘 = .....
+                            </div><br>
+
+                            <div class="choices" data-choices='["-10" , "36", "10" , "-36"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">33 -</span> The number <span class="frection"><span
+                                        class="up">2</span><span class="down">9𝑎</span></span> is a rational number is
+                                𝑎 ≠ .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["2", "0" , "-9", "9"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">34 -</span> The arithmetic mean for the values: 3, 5 - 𝑋, 7 + 𝑋
+                                is .....
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["2" , "3", "4" , "5"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">35 -</span> The additive inverse for the expression: 2𝑋 - 3𝑌 is
+                                .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["-2𝑋 -3𝑌", "2𝑋 + 3𝑌" , "3𝑌 - 2𝑋", "-3𝑌 + 2𝑋"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">36 -</span> The number <span class="frection"><span
+                                        class="up">zero</span><span class="down">-2</span></span>
+                                .......... <i>ℕ</i>
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["∈" , "∉", "⊂" , "⊄"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">37 -</span> If (𝑋 + 𝑌)<sup class="q">2</sup> = 15, 𝑋<sup
+                                    class="q">2</sup> + 𝑌<sup class="q">2</sup>, then 𝑋𝑌 = .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["8", "22" , "6", "4"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">38 -</span> 𝑎𝑏 x 2𝑎<sup class="q">2</sup>𝑏 = .....
+
+
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["2𝑎<sup>3</sup>𝑏<sup>2</sup>", "-2𝑎<sup>2</sup>𝑏", "𝑎𝑏<sup>4</sup>" , "-3𝑎𝑏"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">39 -</span> if the degree of the algebraic trem: 𝑋<sup
+                                    class="q">3</sup> 𝑌<sup class="q">𝑚</sup> is 5, then 𝑚 = .....
+
+                            </div><br>
+                            <div class="choices" data-choices='["1", "2" , "3", "5"]'>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">40 -</span> ℤ
+                                <sub>+</sub> ⋂ ℤ<sub>-</sub> = .....
+
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["ℤ", "ℤ<sub>+</sub>" , "ℤ<sub>-</sub>", "∅"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">41 -</span> the multiplicative inverse of <span
+                                    class="frection border">
+                                    <span class="up ">-7</span>
+                                    <span class="down">8</span>
+                                </span> is .....
+
+                            </div><br>
+                            <div class="choices"
+                                data-choices='["<span class=frection><span class=up>-7</span><span class=down>8</span></span>", "<span class=frection><span class=up>8</span><span class=down>7</span></span>" , "<span class=frection><span class=up>7</span><span class=down>8</span></span>", "<span class=frection><span class=up>-8</span><span class=down>7</span></span>"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">42 -</span> 𝑋
+                                <sup class="q">3</sup>𝑌 x X𝑌<sup class="q">2</sup> = .....
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["𝑋<sup>3</sup>𝑌<sup>2</sup>" , "𝑋<sup>3</sup>𝑌<sup>4</sup>", "𝑋<sup>4</sup>𝑌<sup>3</sup>" , "𝑋<sup>3</sup>𝑌<sup>3</sup>"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">43 -</span> (-5𝑋) + (-3𝑋) -𝑋 = .....
+                            </div><br>
+                            <div class="choices" data-choices='["-9𝑋", "9𝑋" , "8𝑋", "-8𝑋"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">44 -</span> The degree of the algebraic expression: 𝑋<sup
+                                    class="q">3</sup> + 2𝑋𝑌 + 𝑋𝑌<sup class="q">2</sup>𝑋<sup class="q">2</sup> is
+                                the ..... degree.
+                            </div><br>
+
+                            <div class="choices"
+                                data-choices='["1<sup>st</sup>" , "2<sup>nd</sup>", "3<sup>rd</sup>" , "4<sup>th</sup>"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">45 -</span> (3𝑎 + 2𝑏)<sup class="q">2</sup> = 9𝑎<sup
+                                    class="q">2</sup> + ..... + 4𝑏<sup class="q">2</sup>.
+
+                            </div><br>
+                            <div class="choices" data-choices='["6𝑎𝑏", "12𝑎𝑏" , "24𝑎𝑏", "36𝑎𝑏"]'>
+                            </div>
+                        </section>
+                    </div>
+
+
+                </div>
+
+
+                <!-- last question  -->
+                <div>
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">46 -</span>If
+                                <span style='font-size:50px; position: relative; top: 6px;'>&#9645;</span> + <span
+                                    style='font-size:50px; position: relative; top: 6px;'>&#9645;</span> + <span
+                                    style='font-size:50px; position: relative; top: 6px;'>&#9645;</span> + <span
+                                    style='font-size:50px; position: relative; top: 6px;'>&#9651;</span> + <span
+                                    style='font-size:50px; position: relative; top: 6px;'>&#9651;</span> + <span
+                                    style='font-size:50px; position: relative; top: 6px;'>&#9651;</span> = 60, then
+                                <span style='font-size:50px; position: relative; top: 6px;'>&#9645;</span> + <span
+                                    style='font-size:50px; position: relative; top: 6px;'>&#9651;</span> = .....
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["30" , "40", "20" , "50"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">47 -</span> If the mode of the set of values: 5, 𝑋 + 2, 4, 6, 9 os
+                                6, then 𝑋 = ...... .
+
+                            </div><br>
+                            <div class="choices" data-choices='["2", "4" , "6", "5"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">48 -</span> the rational number
+                                <span class="frection"><span class="up">3 - 𝑋 </span><span class="down">7 -
+                                        𝑋</span></span> = zero, when 𝑋 = ..... .
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["7" , "-7", "3" , "-3"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">49 -</span> If half a number is 30, then
+                                <span class="frection"><span class="up">3</span><span class="down">4</span></span> of
+                                this number is ..... .
+
+                            </div><br>
+                            <div class="choices" data-choices='["48", "42" , "40", "45"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="row">
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">50 -</span> If <span class="frection"><span
+                                        class="up">2</span><span class="down">5</span></span>𝑋 = 10, then <span
+                                    class="frection"><span class="up">3</span><span class="down">5</span></span>
+                                =..... .
+
+                            </div><br>
+
+                            <div class="choices" data-choices='["25" , "15", "20" , "5"]'>
+                            </div>
+                        </section>
+                        <section class="six columns" data-quiz-item>
+                            <div class="question">
+                                <span class="number">51 -</span> 0.7 + 0.3<span class="dot">&#775</span> = ..... .
+
+                            </div><br>
+                            <div class="choices"
+                                data-choices='["1", "3.7" , "0.3<span class=dot2>&#775</span>7", "1 <span class=frection><span class=up>1</span><span class=down>30</span></span>"]'>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+
+                <!-- end div last question  -->
+                <section class="lol">
+                    <div id="emc-progress"></div>
+                </section>
+
+
+            </div>
+
+
+
+            <!-- Time Up -->
+
+            <div class="overlay2 x">
+
+                <div class="wrapper">
+                    <ul class="bg-bubbles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="submit2">
+                    <h1>
+                        <i> Math - Algebra </i>
+                    </h1>
+                    <p></p>
+                    <h2>
+                        <i>Mr: Mohammed El-Sayed</i>
+                    </h2>
+                    <button class="startBtn" onclick="startTimer()">
+                        Time's Up
+                    </button>
+                    <button class="revAns" onclick="reviewAns()">
+                        Review Your Answer
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="submit">
+            <div id="pause">
+                
+                <button class="btn btn-primary hidden_btn" class="html2PdfConverter" onclick="createPDF()" id="download">
+                    Download
+                    &nbsp;<i class="fa fa-file-pdf-o" aria-hidden="true" style="color: white; font-size: 22px;"></i>
+                </button>
+                <button class="download ready-active" id="emc-submit" onclick='sendmail()'>Submit Answers</button>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <footer>
+        <div class="">
+            <div class="top_header ">
+                <div class="col-md-3 litile_div">
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>71 Bab Sharq, Alexandria </span>
+                </div>
+                <div class="col-md-3 litile_div">
+
+                    <span><i class="fa fa-phone"></i></span>
+                    <span>(+20) 127 491 5124</span>
+                </div>
+                <div class="col-md-3 litile_div">
+
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span>educationclub@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="bottom_content ">
+                <span class="border-shape col-md-12"></span>
+            </div>
+            <div class="bottom_content ">
+                <div>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright col-12">
+            Copyright © 2021 EducationClub - All rights reserved
+        </div>
+
+    </footer>
+
+
+    <script>
+        // pdf
+        function createPDF() {
+            var element = document.getElementById('element-to-print');
+            html2pdf(element, {
+                margin: 1,
+                padding: 0,
+                filename: 'myfile.pdf',
+                image: {
+                    type: 'jpeg',
+                    quality: 1
+                },
+                html2canvas: {
+                    scale: 2.2,
+                    logging: false
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'A2',
+                    orientation: 'P'
+                },
+                class: createPDF
+            });
+        };
+
+
+
+
+
+        //   reload_exam
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/html2pdf.js/0.9.1/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.1/html2pdf.bundle.min.js"></script>
+
+    <script type="text/javascript" src="js/template/index.js"></script>
+
+
+
+
+</body>
+
+</html>
+
+</html>
